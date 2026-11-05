@@ -1,0 +1,367 @@
+/* User & Admin Dashboard Styling — Clean Unified Light Theme */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f5f8;
+  color: #111111;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.dashboard-header-bar {
+  padding: 1.5rem 3.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.dashboard-welcome {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #E87A3E 0%, #F2994A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.dashboard-content-area {
+  padding: 2.5rem 3.5rem;
+  flex: 1;
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.5px;
+}
+
+.section-title::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #E87A3E;
+  border-radius: 3px;
+}
+
+/* Forms */
+.admin-create-form {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-top: 4px solid #E87A3E;
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  color: #111111;
+}
+
+.admin-create-form h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  color: #96583A;
+  letter-spacing: -0.5px;
+}
+
+.admin-input,
+.admin-textarea {
+  width: 100%;
+  background: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  color: #111111;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.admin-input:focus,
+.admin-textarea:focus {
+  border-color: #E87A3E;
+  box-shadow: 0 0 0 3px rgba(232, 122, 62, 0.15);
+  background: #ffffff;
+}
+
+/* Horizontal Ticket Stub Layout for Dashboard */
+.ticket-stubs-list-dashboard,
+.ticket-stubs-list-my-tickets {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.ticket-stub-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 110px 1fr 300px;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  gap: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  width: 100%;
+  color: #111111;
+}
+
+.ticket-stub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(232, 122, 62, 0.1);
+}
+
+.stub-date-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding-right: 1.2rem;
+  border-right: 1px solid #f0f0f0;
+}
+
+.stub-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.stub-month {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #888888;
+  letter-spacing: 1px;
+}
+
+.stub-day {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #111111;
+  letter-spacing: -1px;
+}
+
+.stub-year {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.stub-time-badge {
+  background: #1f1f1f;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.stub-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stub-header-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.stub-category-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #999999;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.vip-foil-badge {
+  background: linear-gradient(135deg, #fff8e6 0%, #ffe8b3 100%);
+  color: #b37400;
+  border: 1px solid #ffe099;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.stub-event-title {
+  font-family: 'Georgia', 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.3;
+}
+
+.stub-event-subtitle {
+  font-size: 0.88rem;
+  color: #666666;
+  margin-bottom: 0.8rem;
+}
+
+.stub-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.btn-get-tickets {
+  background: #96583A;
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-get-tickets:hover {
+  background: #7a4329;
+  transform: translateY(-1px);
+}
+
+.btn-get-tickets:disabled {
+  background: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-view-details {
+  background: transparent;
+  border: none;
+  color: #666666;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-view-details:hover {
+  color: #111111;
+}
+
+.stub-price-badge {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #96583A;
+  margin-left: auto;
+}
+
+.stub-image-col {
+  width: 100%;
+  height: 140px;
+}
+
+.stub-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stub-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ticket-notch {
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: inset 4px 0 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Utility & States */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  color: #E87A3E;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.no-events-container {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px dashed #e2e8f0;
+  margin-top: 1rem;
+}
+
+.no-events {
+  color: #666666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .ticket-stub-card {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .stub-date-col {
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.8rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .dashboard-content-area {
+    padding: 2rem 1.5rem;
+  }
+  .dashboard-header-bar {
+    padding: 1.2rem 1.5rem;
+  }
+}
